@@ -1,4 +1,8 @@
 package com.miu.curriculumvitae.common
 
-class Education(var title: String, var year: Int, var school: String) {
+import java.io.Serializable
+
+class Education (var title: String,
+                 var betweenYear: String,
+                 var school: String): Serializable {
 }
