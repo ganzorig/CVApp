@@ -1,10 +1,14 @@
 package com.miu.curriculumvitae.fragments
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import com.miu.curriculumvitae.R
+import com.miu.curriculumvitae.WebViewActivity
 import com.miu.curriculumvitae.common.Person
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
@@ -25,10 +29,22 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         person = arguments?.getSerializable(KEY) as Person
+
         view.name.text = "${person.firstName} ${person.lastName}"
         view.position.text = person.profession
         view.about.text = person.about
 
+        view.button_web.setOnClickListener {
+            startActivity(Intent(context, WebViewActivity::class.java).putExtra("url", "https://www.google.com"))
+        }
+
+        view.button_resume.setOnClickListener {
+            //https://www.acponline.org/system/files/documents/membership/fellowship/application/modelcv.pdf
+            var uri = Uri.parse("https://www.acponline.org/system/files/documents/membership/fellowship/application/modelcv.pdf")
+            var viewIntent = Intent(Intent.ACTION_VIEW)
+            viewIntent.setData(uri)
+            startActivity(viewIntent)
+        }
         return view
     }
 }

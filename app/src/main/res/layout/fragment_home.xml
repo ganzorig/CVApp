@@ -69,13 +69,13 @@
                 android:layout_marginBottom="32dp"/>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/button_web"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="View Website" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/button_resume"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/Theme.Design.Light"
