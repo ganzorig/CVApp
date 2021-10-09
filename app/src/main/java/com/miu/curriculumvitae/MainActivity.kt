@@ -1,5 +1,6 @@
 package com.miu.curriculumvitae
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -13,11 +14,11 @@ import com.miu.curriculumvitae.fragments.WorkFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val person = Person(R.drawable.male, "Ganzorig", "Bayarsaikhan", "gbayarsaikhan@miu.edu", "Front End Developer", "+1 669 281 6496", "Dedicated and efficient full stack developer with 6+ years experience in application layers, presentation layers, and databases.")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val person = intent.getSerializableExtra("PERSON") as Person
         supportActionBar?.title = person.firstName
         supportActionBar?.subtitle = person.profession
 
@@ -50,7 +51,12 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.m3 -> {
-                Toast.makeText(applicationContext, item.title, Toast.LENGTH_SHORT).show()
+                val pref = getSharedPreferences("CVPREF", Context.MODE_PRIVATE)
+                val edit = pref.edit();
+                edit.remove("auth")
+                edit.remove("email")
+                edit.apply()
+                finish()
                 return true;
             }
         }

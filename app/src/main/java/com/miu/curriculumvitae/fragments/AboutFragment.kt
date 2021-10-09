@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import androidx.core.view.marginBottom
 import com.miu.curriculumvitae.R
 import com.miu.curriculumvitae.common.Education
+import com.miu.curriculumvitae.common.FlowLayout
 import kotlinx.android.synthetic.main.fragment_about.*
 import kotlinx.android.synthetic.main.item.view.*
 import kotlinx.android.synthetic.main.item_small.view.*
@@ -19,16 +20,17 @@ class AboutFragment : Fragment() {
     var ed2 = Education("Bachelor of Technology", 2010, "CSMS")
     val educations = arrayOf(ed1, ed2)
 
-    var weakneses = arrayOf("Kind", "Greedy", "Funny", "Sad")
+    var weakneses = arrayOf("Kind", "Greedy", "Funny", "Sad", "Greedy", "Funny", "Sad")
     var strengths = arrayOf("Kind", "Greedy", "Funny", "Sad")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_about, container, false)
+
         val eduParent = view.findViewById<LinearLayout>(R.id.educations)
-        val weakParent = view.findViewById<LinearLayout>(R.id.weaknesses)
-        val strParent = view.findViewById<LinearLayout>(R.id.strengths)
+        val weakParent = view.findViewById<FlowLayout>(R.id.weaknesses)
+        val strParent = view.findViewById<FlowLayout>(R.id.strengths)
 
         for (edu in educations) {
             val item = inflater.inflate(R.layout.item, container, false)

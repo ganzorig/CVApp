@@ -10,6 +10,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="login_btn">Login</string>
+    <string name="str_skills">Skills</string>
+    <string name="str_works">Works</string>
+    <string name="str_projects">Projects</string>
     <string name="str_educations">Education backgrounds</string>
     <string name="str_weaknesses">Weaknesses</string>
     <string name="str_strengths">Strengths</string>
