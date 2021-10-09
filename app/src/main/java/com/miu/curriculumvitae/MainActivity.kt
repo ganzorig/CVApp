@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(HomeFragment().newInstance(person), "Home")
-        adapter.addFragment(AboutFragment(), "About")
+        adapter.addFragment(AboutFragment().newInstance(person), "About")
         adapter.addFragment(WorkFragment(), "Work")
         adapter.addFragment(ContactFragment(), "Contact")
 

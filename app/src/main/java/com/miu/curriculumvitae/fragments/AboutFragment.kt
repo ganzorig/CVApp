@@ -10,29 +10,36 @@ import androidx.core.view.marginBottom
 import com.miu.curriculumvitae.R
 import com.miu.curriculumvitae.common.Education
 import com.miu.curriculumvitae.common.FlowLayout
+import com.miu.curriculumvitae.common.Person
 import kotlinx.android.synthetic.main.fragment_about.*
 import kotlinx.android.synthetic.main.item.view.*
 import kotlinx.android.synthetic.main.item_small.view.*
 
 
 class AboutFragment : Fragment() {
-    var ed1 = Education("Master of Science and Technology", "2021", "MIU")
-    var ed2 = Education("Bachelor of Technology", "2010", "CSMS")
-    val educations = arrayOf(ed1, ed2)
+    private val KEY = "person"
+    private lateinit var person: Person
 
-    var weakneses = arrayOf("Kind", "Greedy", "Funny", "Sad", "Greedy", "Funny", "Sad")
-    var strengths = arrayOf("Kind", "Greedy", "Funny", "Sad")
+    fun newInstance(person: Person): AboutFragment {
+        val args = Bundle()
+        val fragment = AboutFragment()
+        args.putSerializable(KEY, person)
+        fragment.arguments = args
+        return fragment
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_about, container, false)
+        person = arguments?.getSerializable(KEY) as Person
 
         val eduParent = view.findViewById<LinearLayout>(R.id.educations)
         val weakParent = view.findViewById<FlowLayout>(R.id.weaknesses)
         val strParent = view.findViewById<FlowLayout>(R.id.strengths)
 
-        for (edu in educations) {
+        for (edu in person.educations) {
             val item = inflater.inflate(R.layout.item, container, false)
             item.title.text= edu.title
             item.place.text= edu.school
@@ -40,14 +47,14 @@ class AboutFragment : Fragment() {
             eduParent.addView(item)
         }
 
-        for (weak in weakneses) {
+        for (weak in person.weaknesses) {
             val item = inflater.inflate(R.layout.item_small, container, false)
             item.item_txtView.text = weak
             item.item_txtView.setBackgroundResource(R.drawable.item_back_green)
             weakParent.addView(item)
         }
 
-        for (str in strengths) {
+        for (str in person.strengths) {
             val item = inflater.inflate(R.layout.item_small, container, false)
             item.item_txtView.text = str
             strParent.addView(item)
