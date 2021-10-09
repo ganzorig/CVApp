@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
         tabs.getTabAt(1)!!.setIcon(R.drawable.about)
         tabs.getTabAt(2)!!.setIcon(R.drawable.work)
         tabs.getTabAt(3)!!.setIcon(R.drawable.contact)
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
