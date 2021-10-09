@@ -15,8 +15,8 @@ import kotlinx.android.synthetic.main.item_small.view.*
 
 
 class AboutFragment : Fragment() {
-    var ed1 = Education("Master of Science and Technology", 2021, "MIU")
-    var ed2 = Education("Bachelor of Technology", 2010, "CSMS")
+    var ed1 = Education("Master of Science and Technology", "2021", "MIU")
+    var ed2 = Education("Bachelor of Technology", "2010", "CSMS")
     val educations = arrayOf(ed1, ed2)
 
     var weakneses = arrayOf("Kind", "Greedy", "Funny", "Sad")
@@ -34,7 +34,7 @@ class AboutFragment : Fragment() {
             val item = inflater.inflate(R.layout.item, container, false)
             item.title.text= edu.title
             item.place.text= edu.school
-            item.year.text= edu.year.toString()
+            item.year.text= edu.betweenYear.toString()
             eduParent.addView(item)
         }
 
