@@ -25,6 +25,7 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         person = arguments?.getSerializable(KEY) as Person
+
         view.name.text = "${person.firstName} ${person.lastName}"
         view.position.text = person.profession
         view.about.text = person.about
