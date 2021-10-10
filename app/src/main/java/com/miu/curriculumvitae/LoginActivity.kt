@@ -120,25 +120,25 @@ class LoginActivity : AppCompatActivity() {
         var person1Strength: ArrayList<String> = arrayListOf("Confident", "Creative", "Dedicated", "Determined", "Decisive")
         var person1Weaknesses: ArrayList<String> = arrayListOf("Impatient", "Allows emotions to show", "Close-minded", "Perfectionist", "Likes to take risks")
         var person1Skills: ArrayList<String> = arrayListOf("Flexibility", "NodeJS", "ReactJS", "Angular", "MeteorJS", "VueJS")
-        var person1:Person = Person(R.drawable.ava_ganzorig, "Ganzorig", "Bayarsaikhan", "miu123", "Front-End Developer", "", "www.leetcode.com/gzo326", person1Strength, person1Weaknesses, person1Skills, arrayListOf(education1, education1_1),contact1, arrayListOf(project1,project1_1), arrayListOf(work1))
+        var person1:Person = Person(R.drawable.ava_ganzorig, "Ganzorig", "Bayarsaikhan", "miu123", "Front-End Developer", "I am over 8+ years of IT experience which includes 6+ years of Extensive experience as a Front End Developer and 3 years of Experience as a UI/UX Developer and 2 years of Experience as mobile application Developer.\n", "www.leetcode.com/gzo326", person1Strength, person1Weaknesses, person1Skills, arrayListOf(education1, education1_1),contact1, arrayListOf(project1,project1_1), arrayListOf(work1))
 
         //---------------------------------Person2---------------------------------//
         var person2Strength: ArrayList<String> = arrayListOf("Industrious", "Hopeful", "Honest", "Motivated", "Precise")
         var person2Weaknesses: ArrayList<String> = arrayListOf("Delegating tasks", "Critical of others", "Bossy", "Strict", "Strong willed")
         var person2Skills: ArrayList<String> = arrayListOf("JAVA", "Project Management", "Shell scripting", "Interest in Helping Others", "Curiosity")
-        var person2:Person = Person(R.drawable.ava_oyunbold, "Oyunbold", "Ganbold", "miu123", "Full Stack Developer", "", "www.leetcode.com/oyunbold", person2Strength, person2Weaknesses, person2Skills, arrayListOf(education2, education2_1),contact2, arrayListOf(project2,project2_1), arrayListOf(work2,work2_1,work2_2))
+        var person2:Person = Person(R.drawable.ava_oyunbold, "Oyunbold", "Ganbold", "miu123", "Full Stack Developer", "Network Engineer with 6+ years of experience in network design, escalation support, network administration, and systems administration. Skilled in delivering technical support, managing network operations, and maintaining enterprise-wide area networks across multi-platform and high uptime Data Center environments.", "www.leetcode.com/oyunbold", person2Strength, person2Weaknesses, person2Skills, arrayListOf(education2, education2_1),contact2, arrayListOf(project2,project2_1), arrayListOf(work2,work2_1,work2_2))
 
         //---------------------------------Person3---------------------------------//
         var person3Strength: ArrayList<String> = arrayListOf("Confident", "Creative", "Dedicated", "Determined", "Decisive")
         var person3Weaknesses: ArrayList<String> = arrayListOf("Impatient", "Allows emotions to show", "Close-minded", "Perfectionist", "Likes to take risks")
         var person3Skills: ArrayList<String> = arrayListOf("Kotlin", "Java", "Java Script", "Mongo DB", "Mobile programming")
-        var person3:Person = Person(R.drawable.ava_enkhee, "Enkhtsetseg", "Ganbaatar", "miu123", "MobileDeveloper", "", "www.leetcode.com/egy", person3Strength, person3Weaknesses, person3Skills, arrayListOf(education3, education3_1),contact3, arrayListOf(project3,project3_1), arrayListOf(work3))
+        var person3:Person = Person(R.drawable.ava_enkhee, "Enkhtsetseg", "Ganbaatar", "miu123", "MobileDeveloper", "Senior Mobile Developer with over 8+ years of IT experience in Analysis, Design, and Development of various Mobile Application development for iPhone (Xcode, Objective C, and Cocoa framework) and Android. Extensive iPhone and iPod Touch application development experience. ", "www.leetcode.com/egy", person3Strength, person3Weaknesses, person3Skills, arrayListOf(education3, education3_1),contact3, arrayListOf(project3,project3_1), arrayListOf(work3))
 
         //---------------------------------Person4---------------------------------//
         var person4Strength: ArrayList<String> = arrayListOf("Confident", "Creative", "Dedicated", "Determined", "Decisive")
         var person4Weaknesses: ArrayList<String> = arrayListOf("Impatient", "Allows emotions to show", "Close-minded", "Perfectionist", "Likes to take risks")
         var person4Skills: ArrayList<String> = arrayListOf("Oracle", "Oracle GG, DG", "MSSQL Server", "MySQL", "Docker","Java")
-        var person4:Person = Person(R.drawable.ava_noro, "Norovdorj", "Otgonbayar", "miu123", "Back-End Developer", "", "www.leetcode.com/norovdorj", person4Strength, person4Weaknesses, person4Skills, arrayListOf(education4, education4_1, education4_2),contact4, arrayListOf(project4,project4_1), arrayListOf(work4))
+        var person4:Person = Person(R.drawable.ava_noro, "Norovdorj", "Otgonbayar", "miu123", "Back-End Developer", "Data Scientist with 8+ years of experience executing data-driven solutions to increase efficiency, accuracy, and utility of internal data processing. Experienced at creating data regression models, using predictive data modeling, and analyzing data mining algorithms to deliver insights and implement action-oriented solutions to complex business problems.", "www.leetcode.com/norovdorj", person4Strength, person4Weaknesses, person4Skills, arrayListOf(education4, education4_1, education4_2),contact4, arrayListOf(project4,project4_1), arrayListOf(work4))
 
         users.add(person1)
         users.add(person2)
