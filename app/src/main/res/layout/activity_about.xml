@@ -12,10 +12,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-
-        android:gravity="top"
         android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,8 +24,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginBottom="15dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
 
@@ -33,8 +33,8 @@
                 android:id="@+id/g_pic"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:shape="ring"
                 android:scaleType="centerInside"
+                android:shape="ring"
                 app:srcCompat="@drawable/ganzo" />
 
             <LinearLayout
@@ -50,29 +50,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif-monospace"
+                    android:text="@string/student_G"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_G" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/g_text2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/student_G_id"
                     android:textSize="12dp"
-                    android:textStyle="normal"
-                    android:text="@string/student_G_id" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/g_text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="cursive"
+                    android:text="@string/student_G_title"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_G_title" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -81,8 +81,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginBottom="15dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
 
@@ -106,37 +106,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif-monospace"
+                    android:text="@string/student_E"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_E" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/e_text2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fontFamily="monospace"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/student_E_id"
                     android:textSize="12dp"
-                    android:textStyle="normal"
-                    android:text="@string/student_E_id" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/e_text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="cursive"
+                    android:text="@string/student_E_title"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_E_title" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="15dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -161,33 +162,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif-monospace"
+                    android:text="@string/student_B"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_B" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/b_text2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/student_B_id"
                     android:textSize="12dp"
-                    android:textStyle="normal"
-                    android:text="@string/student_B_id" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/b_text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="cursive"
+                    android:text="@string/student_B_title"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_B_title" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -215,29 +217,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif-monospace"
+                    android:text="@string/student_N"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="@string/student_N" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/n_text2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/student_N_id"
                     android:textSize="12dp"
-                    android:textStyle="normal"
-                    android:text="@string/student_N_id" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/n_text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/student_N_title"
                     android:fontFamily="cursive"
+                    android:text="@string/student_N_title"
                     android:textSize="15dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

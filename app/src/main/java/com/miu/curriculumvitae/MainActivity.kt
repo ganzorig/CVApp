@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId) {
             R.id.m1 -> {
                 startActivity(Intent(this, ActivityAbout::class.java))
-                Toast.makeText(applicationContext, item.title, Toast.LENGTH_SHORT).show()
                 return true;
             }
 
