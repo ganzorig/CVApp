@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.miu.curriculumvitae.R
-import kotlinx.android.synthetic.main.fragment_contact.*
 
 class ContactFragment : Fragment() {
 

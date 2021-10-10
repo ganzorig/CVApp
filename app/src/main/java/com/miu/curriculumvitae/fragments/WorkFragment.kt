@@ -1,10 +1,14 @@
 package com.miu.curriculumvitae.fragments
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
@@ -45,31 +49,50 @@ class WorkFragment : Fragment() {
         }
         for (pr in person.projects) {
             val item = inflater.inflate(R.layout.item, container, false)
+            item.item_background.setBackgroundResource(R.drawable.item_back_green)
             item.title.text = pr.projectTitle
             item.place.text = pr.Contribution
             item.year.text = pr.betweenYear
             projectParent.addView(item)
         }
-        for (sk in person.skills) {
-            val item = inflater.inflate(R.layout.item_small, container, false)
-            item.item_txtView.text = sk
-            skillParent.addView(item)
-        }
+
+        renderSkills(inflater, container, skillParent)
 
         view.fab.setOnClickListener {
-            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                .setAction("Action", View.OnClickListener {
-                    Toast.makeText(context, "Hi", Toast.LENGTH_SHORT).show()
-                })
-                .show()
-
-                val item = inflater.inflate(R.layout.item_small, container, false)
-                item.item_txtView.text = "sk"
-                skillParent.addView(item)
+            showdialog(view, inflater, container, skillParent)
         }
         return view
     }
 
+    private fun renderSkills(inflater: LayoutInflater, container: ViewGroup?, parent: FlowLayout) {
+        parent.removeAllViews()
+        for (sk in person.skills) {
+            val item = inflater.inflate(R.layout.item_small, container, false)
+            item.item_txtView.text = sk
+            parent.addView(item)
+        }
+    }
 
+    private fun showdialog(view: View, inflater: LayoutInflater, container: ViewGroup?, flowLayout: FlowLayout){
+        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+        builder.setTitle("Add a skill")
+        val input = EditText(context)
+        input.hint = "Enter new skill"
+        input.inputType = InputType.TYPE_CLASS_TEXT
+        builder.setView(input)
 
+        builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+            var newSkill = input.text.toString()
+            person.add(newSkill)
+            renderSkills(inflater, container, flowLayout)
+            Snackbar.make(view, "Successfully added new skill", Snackbar.LENGTH_LONG)
+                .setAction("Undo", View.OnClickListener {
+                    person.removeLastSkill()
+                    renderSkills(inflater, container, flowLayout)
+                }).show()
+        })
+
+        builder.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, which -> dialog.cancel() })
+        builder.show()
+    }
 }

@@ -35,16 +35,17 @@ class HomeFragment : Fragment() {
         view.about.text = person.about
 
         view.button_web.setOnClickListener {
-            startActivity(Intent(context, WebViewActivity::class.java).putExtra("url", "https://www.google.com"))
+            startActivity(Intent(context, WebViewActivity::class.java).putExtra("web", person.webs))
+
         }
 
         view.button_resume.setOnClickListener {
-            //https://www.acponline.org/system/files/documents/membership/fellowship/application/modelcv.pdf
-            var uri = Uri.parse("https://www.acponline.org/system/files/documents/membership/fellowship/application/modelcv.pdf")
+            var uri = Uri.parse(person.contact.github)
             var viewIntent = Intent(Intent.ACTION_VIEW)
-            viewIntent.setData(uri)
+            viewIntent.data = uri
             startActivity(viewIntent)
         }
+
         return view
     }
 }

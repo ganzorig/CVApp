@@ -43,7 +43,7 @@ class AboutFragment : Fragment() {
             val item = inflater.inflate(R.layout.item, container, false)
             item.title.text= edu.title
             item.place.text= edu.school
-            item.year.text= edu.betweenYear.toString()
+            item.year.text= edu.betweenYear
             eduParent.addView(item)
         }
 

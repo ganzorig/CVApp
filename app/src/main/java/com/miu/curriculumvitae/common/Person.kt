@@ -22,4 +22,8 @@ class Person(
     fun add(newSkill:String) {
         this.skills.add(newSkill)
     }
+
+    fun removeLastSkill() {
+        this.skills.removeLast()
+    }
 }

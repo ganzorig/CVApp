@@ -80,10 +80,10 @@ class LoginActivity : AppCompatActivity() {
 
     fun createPerson() {
         //---------------------------------Contact---------------------------------//
-        var contact1: Contact = Contact("99001122", "gbayarsaikhan@miu.edu.mn","www.facebook.com/bganzorig","www.twitter.com/bganzorig","www.github.com/ganzorig")
-        var contact2: Contact = Contact("99112323", "eganbaatar@miu.edu.mn","www.facebook.com/genkhtsetseg","www.twitter.com/genkhtsetseg","www.github.com/genkhtsetseg")
-        var contact3: Contact = Contact("99090099", "oganbold@miu.edu.mn","www.facebook.com/goyunbold","www.twitter.com/goyunbold","www.github.com/goyunbold")
-        var contact4: Contact = Contact("93090002", "notgonbayar@miu.edu.mn","www.facebook.com/norovdorj","www.twitter.com/norovdoo","www.github.com/norovoo")
+        var contact1: Contact = Contact("99001122", "gbayarsaikhan@miu.edu.mn","www.facebook.com/bganzorig","www.twitter.com/bganzorig","https://github.com/ganzorig")
+        var contact2: Contact = Contact("99112323", "eganbaatar@miu.edu.mn","www.facebook.com/genkhtsetseg","www.twitter.com/genkhtsetseg","https://github.com/genkhtsetseg")
+        var contact3: Contact = Contact("99090099", "oganbold@miu.edu.mn","www.facebook.com/goyunbold","www.twitter.com/goyunbold","https://github.com/goyunbold")
+        var contact4: Contact = Contact("93090002", "notgonbayar@miu.edu.mn","www.facebook.com/norovdorj","www.twitter.com/norovdoo","https://github.com/norovoo")
         //---------------------------------Contact end---------------------------------//
         //---------------------------------Education---------------------------------//
         var education1: Education = Education("Bachelor of Computer Science", "2007-2011","CSMS of Mongolia")
