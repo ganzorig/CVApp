@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         adapter.addFragment(HomeFragment().newInstance(person), "Home")
         adapter.addFragment(AboutFragment().newInstance(person), "About")
         adapter.addFragment(WorkFragment().newInstance(person), "Work")
-        adapter.addFragment(ContactFragment(), "Contact")
+        adapter.addFragment(ContactFragment().newInstance(person), "Contact")
 
         viewPager.adapter = adapter
 
