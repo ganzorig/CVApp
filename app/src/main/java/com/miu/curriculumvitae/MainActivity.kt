@@ -1,6 +1,7 @@
 package com.miu.curriculumvitae
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.m1 -> {
+                startActivity(Intent(this, ActivityAbout::class.java))
                 Toast.makeText(applicationContext, item.title, Toast.LENGTH_SHORT).show()
                 return true;
             }

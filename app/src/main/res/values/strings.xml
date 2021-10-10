@@ -16,4 +16,23 @@
     <string name="str_educations">Education backgrounds</string>
     <string name="str_weaknesses">Weaknesses</string>
     <string name="str_strengths">Strengths</string>
+    <string name="student_id">Student ID</string>
+    <string name="student_name">Name:</string>
+    <string name="title">Title:</string>
+
+
+    <string name="student_E">Enkhtsetseg Ganbaatar</string>
+    <string name="student_B">Oyunbold Ganbold</string>
+    <string name="student_N">Norovdorj Otgonbayar</string>
+    <string name="student_G">Ganzorig Bayarsaikhan</string>
+
+    <string name="student_E_id">612722</string>
+    <string name="student_B_id">612734</string>
+    <string name="student_N_id">612743</string>
+    <string name="student_G_id">612696</string>
+
+    <string name="student_E_title">Mobile Developer</string>
+    <string name="student_B_title">Full Stack Developer</string>
+    <string name="student_N_title">Data Engineer</string>
+    <string name="student_G_title">Front End Developer</string>
 </resources>
