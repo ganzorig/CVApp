@@ -33,6 +33,7 @@ class HomeFragment : Fragment() {
         view.name.text = "${person.firstName} ${person.lastName}"
         view.position.text = person.profession
         view.about.text = person.about
+        view.avatar.setImageResource(person.avatar)
 
         view.button_web.setOnClickListener {
             startActivity(Intent(context, WebViewActivity::class.java).putExtra("web", person.webs))

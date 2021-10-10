@@ -9,20 +9,31 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.miu.curriculumvitae.R
+import com.miu.curriculumvitae.common.Person
+import kotlinx.android.synthetic.main.fragment_contact.*
+import kotlinx.android.synthetic.main.fragment_contact.view.*
 
 class ContactFragment : Fragment() {
+    private val KEY = "person"
+    private lateinit var person: Person
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    fun newInstance(person: Person): ContactFragment {
+        val args = Bundle()
+        val fragment = ContactFragment()
+        args.putSerializable(KEY, person)
+        fragment.arguments = args
+        return fragment
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_contact, container, false)
-
+        person = arguments?.getSerializable(KEY) as Person
+        view.txt_phone.text = "${person.contact.phone}"
         var phone = view.findViewById<LinearLayout>(R.id.phone)
         phone.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
-                var intent = Intent(Intent.ACTION_VIEW, Uri.parse("tel:3414003070"));
+                var intent = Intent(Intent.ACTION_VIEW, Uri.parse("tel:${person.contact.phone}"));
                 startActivity(intent);
             }
         })
@@ -30,9 +41,9 @@ class ContactFragment : Fragment() {
         var gmail = view.findViewById<LinearLayout>(R.id.gmail)
         gmail.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
-                val uriText = "mailto:enkhuul999@gmail.com" +
+                val uriText = "mailto:${person.contact.email}" +
                         "?subject=" + Uri.encode("Hello From MDP Maharishi") +
-                        "&body=" + Uri.encode("Hello Enkhee!")
+                        "&body=" + Uri.encode("Hello ${person.firstName}!")
 
                 val uri = Uri.parse(uriText)
 
@@ -47,13 +58,13 @@ class ContactFragment : Fragment() {
             override fun onClick(view: View?) {
                 try {
                     var intent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/enkhee.hana10"));
+                        Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/${person.contact.facebook}"));
                     startActivity(intent);
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("http://www.facebook.com/enkhee.hana10")
+                            Uri.parse("http://www.facebook.com/${person.contact.facebook}")
                         )
                     );
                 }
@@ -64,13 +75,13 @@ class ContactFragment : Fragment() {
             override fun onClick(view: View?) {
                 try {
                     var intent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name=enkhee21571517"));
+                        Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name=${person.contact.twitter}"));
                     startActivity(intent);
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("https://twitter.com/#!/enkhee21571517")
+                            Uri.parse("https://twitter.com/#!/${person.contact.twitter}")
                         )
                     );
                 }
@@ -81,13 +92,13 @@ class ContactFragment : Fragment() {
             override fun onClick(view: View?) {
                 try {
                     var intent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/enkhuul88"));
+                        Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/${person.contact.instagram}"));
                     startActivity(intent);
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("http://instagram.com/enkhuul88")
+                            Uri.parse("http://instagram.com/${person.contact.instagram}")
                         )
                     );
                 }

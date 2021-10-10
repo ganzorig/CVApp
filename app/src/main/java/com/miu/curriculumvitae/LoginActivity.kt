@@ -80,10 +80,11 @@ class LoginActivity : AppCompatActivity() {
 
     fun createPerson() {
         //---------------------------------Contact---------------------------------//
-        var contact1: Contact = Contact("99001122", "gbayarsaikhan@miu.edu.mn","www.facebook.com/bganzorig","www.twitter.com/bganzorig","https://github.com/ganzorig")
-        var contact2: Contact = Contact("99112323", "eganbaatar@miu.edu.mn","www.facebook.com/genkhtsetseg","www.twitter.com/genkhtsetseg","https://github.com/genkhtsetseg")
-        var contact3: Contact = Contact("99090099", "oganbold@miu.edu.mn","www.facebook.com/goyunbold","www.twitter.com/goyunbold","https://github.com/goyunbold")
-        var contact4: Contact = Contact("93090002", "notgonbayar@miu.edu.mn","www.facebook.com/norovdorj","www.twitter.com/norovdoo","https://github.com/norovoo")
+        var contact1: Contact = Contact("99001122", "gbayarsaikhan@miu.edu.mn","g4nzorig","gzo_326","https://github.com/ganzorig","g4nzo")
+        var contact3: Contact = Contact("99112323", "eganbaatar@miu.edu.mn","enkhee.hana10","enkhee21571517","https://github.com/egy10", "enkhuul88")
+        var contact2: Contact = Contact("99090099", "oganbold@miu.edu.mn","oyunbold.ganbold","GanboldG","https://github.com/goyunbold","oyunboldg")
+        var contact4: Contact = Contact("93090002", "notgonbayar@miu.edu.mn","norovdorjo","norovdoo","https://github.com/norovoo","norovdorjo")
+
         //---------------------------------Contact end---------------------------------//
         //---------------------------------Education---------------------------------//
         var education1: Education = Education("Bachelor of Computer Science", "2007-2011","CSMS of Mongolia")
@@ -119,25 +120,25 @@ class LoginActivity : AppCompatActivity() {
         var person1Strength: ArrayList<String> = arrayListOf("Confident", "Creative", "Dedicated", "Determined", "Decisive")
         var person1Weaknesses: ArrayList<String> = arrayListOf("Impatient", "Allows emotions to show", "Close-minded", "Perfectionist", "Likes to take risks")
         var person1Skills: ArrayList<String> = arrayListOf("Flexibility", "NodeJS", "ReactJS", "Angular", "MeteorJS", "VueJS")
-        var person1:Person = Person(1, "Ganzorig", "Bayarsaikhan", "miu123", "Front-End Developer", "", "www.leetcode.com/gzo326", person1Strength, person1Weaknesses, person1Skills, arrayListOf(education1, education1_1),contact1, arrayListOf(project1,project1_1), arrayListOf(work1))
+        var person1:Person = Person(R.drawable.ava_ganzorig, "Ganzorig", "Bayarsaikhan", "miu123", "Front-End Developer", "", "www.leetcode.com/gzo326", person1Strength, person1Weaknesses, person1Skills, arrayListOf(education1, education1_1),contact1, arrayListOf(project1,project1_1), arrayListOf(work1))
 
         //---------------------------------Person2---------------------------------//
         var person2Strength: ArrayList<String> = arrayListOf("Industrious", "Hopeful", "Honest", "Motivated", "Precise")
         var person2Weaknesses: ArrayList<String> = arrayListOf("Delegating tasks", "Critical of others", "Bossy", "Strict", "Strong willed")
         var person2Skills: ArrayList<String> = arrayListOf("JAVA", "Project Management", "Shell scripting", "Interest in Helping Others", "Curiosity")
-        var person2:Person = Person(2, "Oyunbold", "Ganbold", "miu123", "Full Stack Developer", "", "www.leetcode.com/oyunbold", person2Strength, person2Weaknesses, person2Skills, arrayListOf(education2, education2_1),contact2, arrayListOf(project2,project2_1), arrayListOf(work2,work2_1,work2_2))
+        var person2:Person = Person(R.drawable.ava_oyunbold, "Oyunbold", "Ganbold", "miu123", "Full Stack Developer", "", "www.leetcode.com/oyunbold", person2Strength, person2Weaknesses, person2Skills, arrayListOf(education2, education2_1),contact2, arrayListOf(project2,project2_1), arrayListOf(work2,work2_1,work2_2))
 
         //---------------------------------Person3---------------------------------//
         var person3Strength: ArrayList<String> = arrayListOf("Confident", "Creative", "Dedicated", "Determined", "Decisive")
         var person3Weaknesses: ArrayList<String> = arrayListOf("Impatient", "Allows emotions to show", "Close-minded", "Perfectionist", "Likes to take risks")
         var person3Skills: ArrayList<String> = arrayListOf("Kotlin", "Java", "Java Script", "Mongo DB", "Mobile programming")
-        var person3:Person = Person(3, "Enkhtsetseg", "Ganbaatar", "miu123", "MobileDeveloper", "", "www.leetcode.com/egy", person3Strength, person3Weaknesses, person3Skills, arrayListOf(education3, education3_1),contact3, arrayListOf(project3,project3_1), arrayListOf(work3))
+        var person3:Person = Person(R.drawable.ava_enkhee, "Enkhtsetseg", "Ganbaatar", "miu123", "MobileDeveloper", "", "www.leetcode.com/egy", person3Strength, person3Weaknesses, person3Skills, arrayListOf(education3, education3_1),contact3, arrayListOf(project3,project3_1), arrayListOf(work3))
 
         //---------------------------------Person4---------------------------------//
         var person4Strength: ArrayList<String> = arrayListOf("Confident", "Creative", "Dedicated", "Determined", "Decisive")
         var person4Weaknesses: ArrayList<String> = arrayListOf("Impatient", "Allows emotions to show", "Close-minded", "Perfectionist", "Likes to take risks")
         var person4Skills: ArrayList<String> = arrayListOf("Oracle", "Oracle GG, DG", "MSSQL Server", "MySQL", "Docker","Java")
-        var person4:Person = Person(4, "Norovdorj", "Otgonbayar", "miu123", "Back-End Developer", "", "www.leetcode.com/norovdorj", person4Strength, person4Weaknesses, person4Skills, arrayListOf(education4, education4_1, education4_2),contact4, arrayListOf(project4,project4_1), arrayListOf(work4))
+        var person4:Person = Person(R.drawable.ava_noro, "Norovdorj", "Otgonbayar", "miu123", "Back-End Developer", "", "www.leetcode.com/norovdorj", person4Strength, person4Weaknesses, person4Skills, arrayListOf(education4, education4_1, education4_2),contact4, arrayListOf(project4,project4_1), arrayListOf(work4))
 
         users.add(person1)
         users.add(person2)
